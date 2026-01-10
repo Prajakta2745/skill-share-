@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Light/Dark Theme System */
+
+@layer base {
+  :root {
+    /* LIGHT MODE - Premium Professional */
+    
+    /* Primary Colors */
+    --primary: 224 58% 42%; /* #3A4D8F - Professional Blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 224 58% 36%;
+
+    /* Secondary Colors */
+    --secondary: 163 71% 41%; /* #16C79A - Teal/Green */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 163 71% 35%;
+
+    /* Accent Colors */
+    --accent: 38 94% 58%; /* #F5A623 - Warm Gold */
+    --accent-foreground: 0 0% 100%;
+
+    /* Background & Surface */
+    --background: 217 45% 98%; /* #F4F6FB - Light Blue-White */
+    --foreground: 0 0% 12%; /* #1F1F1F - Dark Text */
+
+    --card: 0 0% 100%; /* #FFFFFF - Pure White */
+    --card-foreground: 0 0% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+
+    /* Text & Muted */
+    --muted: 210 20% 95%; /* Light Gray Background */
+    --muted-foreground: 0 0% 42%; /* #6B6B6B - Secondary Text */
+
+    /* Borders & Inputs */
+    --border: 213 33% 93%; /* #E1E5EE - Subtle Border */
+    --input: 213 33% 93%;
+    --ring: 224 58% 42%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Gradients - Light Mode */
+    --gradient-primary: linear-gradient(135deg, #3A4D8F 0%, #232E57 100%);
+    --gradient-secondary: linear-gradient(135deg, #16C79A 0%, #0F8A6B 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(58, 77, 143, 0.95) 0%, rgba(35, 46, 87, 0.95) 100%);
+    --gradient-light: linear-gradient(135deg, #F4F6FB 0%, #FFFFFF 100%);
+
+    /* Shadows - Light Mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* DARK MODE - Modern Premium Elegant */
+    
+    /* Primary Colors */
+    --primary: 226 72% 62%; /* #5B73E8 - Light Indigo Blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 226 72% 56%;
+
+    /* Secondary Colors */
+    --secondary: 163 85% 59%; /* #4CE5C4 - Teal Glow */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 163 85% 53%;
+
+    /* Accent Colors */
+    --accent: 38 94% 58%; /* #F5A623 - Warm Gold (same) */
+    --accent-foreground: 0 0% 100%;
+
+    /* Background & Surface */
+    --background: 215 19% 7%; /* #0F1117 - Deep Charcoal */
+    --foreground: 0 0% 100%; /* #FFFFFF - Bright Text */
+
+    --card: 213 17% 11%; /* #1A1D24 - Dark Card */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 213 17% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Text & Muted */
+    --muted: 213 17% 15%; /* Dark Muted Background */
+    --muted-foreground: 0 0% 63%; /* #A1A1A1 - Secondary Text */
+
+    /* Borders & Inputs */
+    --border: 213 17% 15%; /* #2A2D36 - Subtle Dark Border */
+    --input: 213 17% 15%;
+    --ring: 226 72% 62%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Gradients - Dark Mode */
+    --gradient-primary: linear-gradient(135deg, #1A1D24 0%, #0F1117 100%);
+    --gradient-secondary: linear-gradient(135deg, #4CE5C4 0%, rgba(76, 229, 196, 0.3) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(26, 29, 36, 0.95) 0%, rgba(15, 17, 23, 0.95) 100%);
+    --gradient-light: linear-gradient(135deg, #1A1D24 0%, #0F1117 100%);
+
+    /* Shadows - Dark Mode with Glow */
+    --shadow-sm: 0 1px 2px 0 rgba(76, 229, 196, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(76, 229, 196, 0.12);
+    --shadow-lg: 0 10px 15px -3px rgba(76, 229, 196, 0.15);
+    --shadow-xl: 0 20px 25px -5px rgba(76, 229, 196, 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border transition-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

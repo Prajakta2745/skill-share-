@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillShare - Learn, Teach, and Connect</title>
+    <meta name="description" content="AI-powered skill sharing platform. Find mentors, learn new skills, and connect with your community. Expert-led lessons in programming, music, art, and more." />
+    <meta name="author" content="SkillShare" />
+
+    <meta property="og:title" content="SkillShare - Learn, Teach, and Connect" />
+    <meta property="og:description" content="AI-powered skill sharing platform. Find mentors, learn new skills, and connect with your community." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- SkillShare Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+      // Prevent FOUC (Flash of Unstyled Content) by setting theme before React renders
+      const theme = localStorage.getItem("theme") || 
+                   (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
