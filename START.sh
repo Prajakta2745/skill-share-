@@ -30,7 +30,7 @@ sleep 3
 # Start Frontend
 echo "🎨 Starting Frontend (Vite on port 5173)..."
 echo "-------------------------------------------"
-cd ../skill-connect-ai-main
+cd ../frontend
 npm run dev &
 FRONTEND_PID=$!
 echo "✅ Frontend started with PID: $FRONTEND_PID"

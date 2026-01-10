@@ -1,0 +1,25 @@
+<svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100" height="100" fill="white"/>
+  
+  <!-- Blue circle top-left -->
+  <circle cx="35" cy="25" r="10" fill="#4A90E2"/>
+  
+  <!-- Green circle top-right -->
+  <circle cx="65" cy="25" r="10" fill="#7ED321"/>
+  
+  <!-- Blue link shape -->
+  <g fill="#4A90E2">
+    <path d="M 20 45 Q 20 35 30 35 L 30 50 Q 30 60 20 60 Z" />
+    <path d="M 30 45 L 30 50 L 45 50 L 45 45 Z" />
+  </g>
+  
+  <!-- Green link shape -->
+  <g fill="#7ED321">
+    <path d="M 70 45 Q 70 35 80 35 L 80 50 Q 80 60 70 60 Z" />
+    <path d="M 45 45 L 45 50 L 60 50 L 60 45 Z" />
+  </g>
+  
+  <!-- Heart connector -->
+  <path d="M 40 50 Q 50 60 60 50" stroke="#4A90E2" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

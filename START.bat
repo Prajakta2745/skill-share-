@@ -34,7 +34,7 @@ timeout /t 3 /nobreak
 REM Start Frontend
 echo 🎨 Starting Frontend (Vite on port 5173)...
 echo -------------------------------------------
-cd ..\skill-connect-ai-main
+cd ..\frontend
 start cmd /k "npm run dev"
 echo ✅ Frontend started in a new terminal window
 echo.
